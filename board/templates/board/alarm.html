@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>알람</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/d9483ff595.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'css/alarm.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: #d3d2d2;">
+
+  <nav>
+    <!--사진은 위에 첨부했는데 각자 저장한 이름 대로 해 주세요 -->
+      <span class=""><a href="#"><img src="{% static 'img/logo-notStr.png' %}" alt="logoImage" ></a></span>
+      <span class="web-name">EYE CONTACT</span>
+    <div class="toggle">
+    <!--주의 폰트어썸 링크 & 제이쿼 head에 추가 필요  -->
+
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+    </div>
+    <ul>
+            <li><a href="{% url 'web:main1' %}">홈</a></li>
+            <li><a href="{% url 'board:matching' %}">매칭</a></li>
+            <li><a href="{% url 'board:community' %}">커뮤니티</a></li>
+            <li><a href="{% url 'board:mypage' %}">마이페이지</a></li>
+            <li><a href="{% url 'web:logout' %}">로그아웃</a></li>
+    </ul>
+</nav>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.menu').click(function(){
+            $('ul').toggleClass('active');
+        })
+    })
+</script>
+
+
+
+  <div class="top">
+    <div class="title">
+      <a class="more" href="{% url 'board:mypage' %}"><i class="fa-solid fa-angle-left"></i></a>
+      알람
+    </div>
+  </div>
+
+  {% for alarm in alarms %}
+  <div class="layout">
+    <div class="box2">
+      <div class="tit">
+        <div class="text1">
+          <br>
+          {{ alarm.sender }}
+        </div>
+        <div class="time"> {{ alarm.created_at }}</div>
+      </div>
+      <br>
+      <p class="card-description">
+       {{ alarm.content }}
+      </p>
+      <input type="checkbox" class="card-content__more-btn">
+    </div>
+  </div>
+    {% endfor %}
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</body>
+</html>

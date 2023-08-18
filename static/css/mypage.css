@@ -1,0 +1,330 @@
+
+/* 토글 */
+nav {
+  width: 100%;
+  background: #d3d2d2;
+}
+
+ul {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/*  리스트 간 간격 좀 더 늘렸습니다 */
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 30px;
+}
+
+/*
+  수정 필요
+  ul li:hover{
+  background-color: rgb(127, 127, 127);
+  border-radius: 10px;
+} */
+
+ul li a {
+/* 색상은 각자 페이지에 맞게 자유로이 */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.toggle {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+  padding: 20px 30px;
+  text-align: right;
+  box-sizing: border-box;
+  color: #d3d2d2;
+  font-size: 32px;
+  display: none;
+}
+
+/*  웹 로고 + 서비스 명 스타일 추가*/
+.web-name{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+nav span:first-child {
+  margin-left: 5%;
+}
+
+nav span{
+  float: left;
+}
+
+
+nav span img{
+  width: 100px;
+  padding: 10px;
+}
+
+/* 리스트 글이 길어져서 963px부터 블록으로 떨어지더라구 지저분한 거 같아서 964px로 변경했습니다!  */
+@media (min-width:220px) and (max-width:964px) {
+  .toggle{
+      display: block;
+  }
+  ul{
+      width: 100%;
+      display: none;
+  }
+  ul li{
+      display: block;
+      text-align: center;
+  }
+  .active{
+      display: block;
+  }
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+.img {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body, .box {
+    text-align: center;
+  }
+  .box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#layout {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  /* position: fixed;
+    overflow: hidden; */
+}
+
+
+    #profile{
+      display: inline-block;
+      /* justify-items: center; */
+      border-radius: 60px;
+      width: 110px;
+      height: 110px;
+      background-color: #ffffff;
+      padding: 10px;
+  }
+
+  #profile i{
+     margin-top: 1.3rem;
+     font-size: 55px  ;
+  }
+
+  .div1 {
+    text-align: center;
+    margin-top: 1%;
+  }
+
+  .str2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-top: 1%;
+  }
+
+ .str3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(140, 140, 140);
+  }
+
+  .box1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #b6b6b6;
+    border-radius: 20px;
+    padding: 12px;
+  }
+
+  .box2 {
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #b6b6b6;
+    border-radius: 20px;
+    width: 440px;
+    height: 600px;
+  }
+
+  .div1 .box3 {
+    margin-left: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    width: 400px;
+    height: 120px;
+  }
+
+  .div1 .box4 {
+    margin-left: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    width: 400px;
+    height: 405px;
+  }
+
+  .box {
+    text-align: center;
+    background-color: #d3d2d2;
+    border-radius: 30px;
+    padding: 30px;
+    height: 820px;
+    width: 500px;
+    margin-left: 33.5%;
+  }
+
+  .coin2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+  }
+
+  .coin3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(79, 143, 227);
+    font-size: 25px;
+  }
+
+
+ .coinbtn {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-left: 35%;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #5f5f5f;
+  color: #ffffff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.coinbtn:hover {
+  background-color: #898989;
+  box-shadow: 0 0 20px #acacac50;
+  transform: scale(1.1);
+}
+
+.coinbtn:active {
+  background-color: #656565;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+
+
+footer {
+  text-align: center;
+}
+
+.btn1 {
+  background: none;
+  border: none;
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin-right: 12%;
+  margin-top: 2%;
+}
+
+.btn1:hover {
+  background: #5f5f5f3d;
+  transition: 0.5s;
+}
+
+.btn2 {
+  background: none;
+  border: none;
+  padding: 15px 17px;
+  margin-right: 2%;
+  border-radius: 10px;
+}
+
+.btn2:hover {
+  background: #5f5f5f3d;
+  transition: 0.5s;
+}
+
+.btn3 {
+  background: none;
+  border: none;
+  padding: 15px 16px;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+.btn3:hover {
+  background: #5f5f5f3d;
+  transition: 0.5s;
+}
+
+.img {
+  text-align: left;
+  margin-left: 13%;
+}
+
+
+.level {
+  text-align: left;
+  margin-left: 10%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.lv1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.lv2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.lv3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.lv4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.lv5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+a:link { text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}

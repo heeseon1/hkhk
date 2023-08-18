@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EYE CONTACT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/mypage.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        </style>
+</head>
+<body style="background-color: #d3d2d2;">
+
+
+    <nav>
+        <!--사진은 위에 첨부했는데 각자 저장한 이름 대로 해 주세요 -->
+    <span class=""><a href="#"><img src="{% static 'img/logo-notStr.png' %}" alt="logoImage" ></a></span>
+    <span class="web-name">EYE CONTACT</span>
+  <div class="toggle">
+        <!--주의 폰트어썸 링크 & 제이쿼 head에 추가 필요  -->
+
+      <i class="fa fa-bars menu" aria-hidden="true" style="color: white;"></i>
+  </div>
+  <ul>
+      <li><a href="{% url 'web:main1' %}">홈</a></li>
+            <li><a href="{% url 'board:matching' %}">매칭</a></li>
+            <li><a href="{% url 'board:community' %}">커뮤니티</a></li>
+            <li><a href="{% url 'board:mypage' %}">마이페이지</a></li>
+            <li><a href="{% url 'web:logout' %}">로그아웃</a></li>
+  </ul>
+</nav>
+
+    <div class="layout">
+        <div class="box" style="text-align: center;">
+            <div class="div1">
+                <span id="profile">
+                    <i class="fas fa-duotone fa-user"></i>
+                </span>
+                <div class="str2">
+                    <span>{{ profile.username }} </span>
+                </div>
+
+
+                <div class="str3">
+                    <span>Lv.3 </span>
+                </div>
+
+
+                <br>
+
+                <div class="box1">
+                    <div class="coin">
+                        <span class="coin2">내 아이코인</span>
+                        <span class="coin3">7 coin</span>
+                        <button class="coinbtn"><a href="{% url 'board:coin' %}"> 충전하기</a></button>
+                    </div>
+                </div>
+                <br><br>
+                <div class="box2">
+                    <br>
+                    <div class="box3">
+                        <div class="icon">
+                        <button class="btn1"><a href="{% url 'board:use_content' %}">
+                            <i class="fa-solid fa-file-lines" style="color: #000000; font-size: 40px;"></i>
+                            <br>
+                            <span>이용내역</span></a>
+                        </button>
+                        <button class="btn2"><a href="{% url 'board:alarm' %}">
+                            <i class="fa-solid fa-bell" style="color: #000000; font-size: 40px;"></i>
+                            <br>
+                            <span>알람</span></a>
+                        </button>
+                        <button class="btn3"><a href="{% url 'board:setting_page' %}">
+                            <i class="fa-solid fa-gear" style="color: #000000; font-size: 40px;"></i>
+                            <br>
+                            <span>설정</span>
+                        </button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="box4">
+                        <br>
+                        <div class="level">LEVEL 등급표</div>
+                        <br>
+                        <div class="img">
+                            <img src="{% static 'img/HEXAGON.png' %}" alt="">&nbsp;&nbsp;<span class="lv1">Lv.1) HEXAGON</span>
+                            <br><br>
+                            <img src="{% static 'img/PENTAGON.png' %}" alt="">&nbsp;&nbsp;<span class="lv2">Lv.2) PENTAGON</span>
+                            <br><br>
+                            <img src="{% static 'img/SQUARE.png' %}" alt="">&nbsp;&nbsp;<span class="lv3">Lv.3) SQUARE</span>
+                            <br><br>
+                            <img src="{% static 'img/TRIANGLE.png' %}" alt="">&nbsp;&nbsp;<span class="lv4">Lv.4) TRIANGLE</span>
+                            <br><br>
+                            <img src="{% static 'img/CLCLE.png' %}" alt="">&nbsp;&nbsp;<span class="lv5">Lv.5) CICLE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+   <script src="https://kit.fontawesome.com/c4fe13f55a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+</body>
+</html>

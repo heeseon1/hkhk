@@ -1,0 +1,356 @@
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #7f7f7f;
+}
+
+
+
+
+/* 토글 */
+nav {
+  width: 100%;
+  background-color: #d3d2d2;
+}
+
+ul {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/*  리스트 간 간격 좀 더 늘렸습니다 */
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 30px;
+}
+
+/*
+  수정 필요
+  ul li:hover{
+  background-color: rgb(127, 127, 127);
+  border-radius: 10px;
+} */
+
+ul li a {
+/* 색상은 각자 페이지에 맞게 자유로이 */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.toggle {
+  width: 100%;
+  padding: 20px 30px;
+  text-align: right;
+  box-sizing: border-box;
+  color: white;
+  font-size: 32px;
+  display: none;
+}
+
+/*  웹 로고 + 서비스 명 스타일 추가*/
+.web-name{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+nav span:first-child {
+  margin-left: 5%;
+}
+
+nav span{
+  float: left;
+}
+
+
+nav span img{
+  width: 100px;
+  padding: 10px;
+}
+
+
+a:link { text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+
+
+
+
+
+
+
+
+
+
+.layout {
+  font-family: 'Noto Sans KR', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #d3d2d2;
+}
+
+.ba{
+  float: left;
+  color: #000;
+}
+
+.nav {
+  font-family: 'Noto Sans KR', sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #7f7f7f;
+  position: fixed;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.a{
+  float: left;
+}
+.nana {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #d3d2d2;
+  }
+
+.box1 {
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.box2 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.text1 {
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.reply {
+  color: #666;
+}
+
+.nana {
+  list-style: none;
+  padding: 30px;
+  background-color: #d3d2d2;
+}
+
+.toggle {
+  width: 100%;
+  padding: 20px 30px;
+  text-align: right;
+  box-sizing: border-box;
+  color: white;
+  font-size: 32px;
+  display: none;
+}
+
+@media (min-width: 220px) and (max-width:990px) {
+  .nana {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .box1 {
+    margin: 0 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .back {
+    margin-left: 10px;
+  }
+  .title {
+    text-align: center;
+  }
+  ul {
+    text-align: center;
+    flex-direction: column;
+  }
+  .box1 {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .box2{
+    text-align: center;
+  }
+
+}
+
+@media (min-width:220px) and (max-width:990px) {
+  .toggle{
+      display: block;
+  }
+  ul{
+      width: 100%;
+      display: none;
+  }
+  ul li{
+      display: block;
+      text-align: center;
+  }
+  .active{
+      display: block;
+  }
+}
+
+@media screen and (max-width:1020px) {
+  #layout {
+      width: 960px;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+
+    html, body {
+      width: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    footer {
+      height: 200px;
+    }
+}
+
+.layout {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 0 20px;
+  margin: 0 auto;
+  /* position: fixed;
+    overflow: hidden; */
+}
+
+.title {
+  font-family: 'Noto Sans KR', sans-serif;
+    font-size:45px;
+    font-weight: bold ;
+    text-align: center;
+    margin:0;
+    padding:60px;
+    background-color: #d3d2d2;
+
+  }
+
+
+.all{
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #000;
+  text-align: center;
+  font-size: small;
+}
+
+.back{
+  all: unset;
+  border: 0;
+  outline: 0;
+  width: 14px;
+  height: 24px;
+  flex-shrink: 0;
+  stroke-width: 1.5px;
+  stroke: #8D8D8D;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.logo{
+  margin-left: 12px;
+  margin-top: 22px;
+}
+
+.img   {
+  margin-left: 12px;
+  margin-top: 22px;
+}
+
+.all{
+  border: none;
+  width: 160px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #FFF;
+  text-align: center;
+}
+
+
+.all:hover {
+    background-color:black;
+    color: white;
+}
+
+.text{
+
+  color: #666;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  overflow:hidden;
+	height:auto;
+}
+
+.reply{
+    height: 40px;
+    border-radius: 25px;
+    background: #FFFA84;
+    padding-top: 10px;
+}
+
+.box2{
+
+  text-align: center;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #FFF;
+
+}
+
+
+
+
+
+

@@ -1,0 +1,346 @@
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.html, body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 가운데 정렬 */
+.title{
+  position: relative;
+}
+.ac{
+  position: absolute;
+  transform: translate(50%, 50%);
+}
+
+
+/* 토글 */
+nav {
+  width: 100%;
+  background-color: #d3d2d2;
+}
+
+ul {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 30px;
+}
+
+ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.toggle {
+  width: 100%;
+  padding: 20px 30px;
+  text-align: right;
+  box-sizing: border-box;
+  color: white;
+  font-size: 32px;
+  display: none;
+}
+
+/*  웹 로고 + 서비스 명 스타일 추가*/
+.web-name{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+nav span:first-child {
+  margin-left: 5%;
+}
+
+nav span{
+  float: left;
+}
+
+
+nav span img{
+  width: 100px;
+  padding: 10px;
+}
+
+
+
+
+.more{
+    float: left;
+    color: black;
+}
+
+#layout {
+  text-align: center;
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: #d3d2d2;
+  /* position: fixed;
+    overflow: hidden; */
+}
+
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; /* 화면 높이에 맞춰서 정렬됩니다 */
+}
+
+.layout {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color:#d3d2d2;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px; /* 원하는 여백값으로 조정하세요 */
+  }
+    /* position: fixed;
+      overflow: hidden; */
+
+
+  .title {
+    font-family: 'Noto Sans KR', sans-serif;
+      font-size: 45px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      padding: 60px;
+  }
+
+
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .back {
+      margin-left: 10px;
+    }
+    .title {
+      text-align: center;
+    }
+    ul {
+      text-align: center;
+      flex-direction: column;
+    }
+    .box1 {
+      margin-bottom: 10px;
+    }
+    .box1 {
+      padding: 8px 16px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+    .box2{
+      text-align: center;
+    }
+
+  }
+
+
+
+  @media screen and (max-width:1020px) {
+    #layout {
+        width: 960px;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+
+      html, body {
+        width: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      footer {
+        height: 200px;
+      }
+  }
+/* 리스트 글이 길어져서 963px부터 블록으로 떨어지더라구 지저분한 거 같아서 964px로 변경했습니다!  */
+@media (min-width:220px) and (max-width:964px) {
+  .toggle{
+      display: block;
+  }
+  ul{
+      width: 100%;
+      display: none;
+  }
+  ul li{
+      display: block;
+      text-align: center;
+  }
+  .active{
+      display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  body, .box {
+    text-align: center;
+  }
+  .box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+  .title {
+    font-family: 'Noto Sans KR', sans-serif;
+      font-size:45px;
+      font-weight: bold ;
+      text-align: center;
+      margin:0;
+      padding:60px;
+
+    }
+
+
+  .all{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    text-align: center;
+    font-size: small;
+  }
+
+  .back{
+    all: unset;
+    border: 0;
+    outline: 0;
+    width: 14px;
+    height: 24px;
+    flex-shrink: 0;
+    stroke-width: 1.5px;
+    stroke: #8D8D8D;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+  .title {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    text-align: center;
+    font-size: bold;
+    font-style: normal;
+    letter-spacing: 0.32px;
+    padding: 150px;
+    /* margin-left: 109px; */
+}
+.back{
+    all: unset;
+    border: 0;
+    outline: 0;
+    width: 14px;
+    height: 24px;
+    flex-shrink: 0;
+    stroke-width: 1.5px;
+    stroke: #8D8D8D;
+    margin-top: 20px;
+
+}
+
+.logo{
+    margin-left: 12px;
+    margin-top: 22px;
+}
+
+.img   {
+    margin-left: 12px;
+    margin-top: 22px;
+}
+
+.text{
+    margin-right: 65px;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: center;
+    font-family: Noto Sans KR;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.32px;
+}
+.btn btn-primary{
+   margin-left: 80px;
+    margin-bottom: 20px;
+    width: 85px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #626262;
+    color: white;
+}
+
+.charge1{
+    margin-left: 90px;
+    margin-bottom: 20px;
+    width: 85px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #626262;
+    color: white;
+}
+.charge5{
+    width: 85px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #626262;
+    margin-left: 71px;
+    margin-bottom: 30%;
+    color: white;
+}
+.box3{
+    width: 356px;
+    height: 77px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    margin-left: 17px;
+}
+.box4{
+    width: 356px;
+height: 77px;
+flex-shrink: 0;
+background: #D9D9D9;
+margin-left: 17px;
+}
+.box5{
+    width: 356px;
+height: 77px;
+flex-shrink: 0;
+background: #D9D9D9;
+margin-left: 17px;
+}
+.ba{
+    float: left;
+}

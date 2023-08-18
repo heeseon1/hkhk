@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    {% block style %}
+    {% endblock %}
+</head>
+
+
+
+<body>
+<nav>
+        <span class=""><a href="#"><img src="{% static 'img/logo-notStr.png' %}" alt="logoImage" ></a></span>
+        <span class="web-name">EYE CONTACT</span>
+      <div class="toggle">
+			<!--주의 폰트어썸 링크 & 제이쿼 head에 추가 필요  -->
+
+          <i class="fa fa-bars menu" aria-hidden="true"></i>
+      </div>
+      <ul>
+          <li><a href="{% url 'board:home' %}">홈</a></li>
+          <li><a href="{% url 'board:matching' %}">매칭</a></li>
+          <li><a href="{% url 'board:community' %}">커뮤니티</a></li>
+          <li><a href="#">마이페이지</a></li>
+      </ul>
+  </nav>
+
+<script type="text/javascript">
+      $(document).ready(function(){
+          $('.menu').click(function(){
+              $('ul').toggleClass('active');
+          })
+      })
+  </script>
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

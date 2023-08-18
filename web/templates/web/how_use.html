@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EYE CONTACT 사용법</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://kit.fontawesome.com/d9483ff595.js" crossorigin="anonymous"></script>
+    {% load static %}
+    <link href="{% static 'css/how_use.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav>
+        <span class=""><a href="#"><img src="{% static 'img/logo-notStr.png' %}" alt="logoImage"></a></span>
+        <span class="web-name">EYE CONTACT</span>
+        <div class="toggle">
+
+            <i class="fa fa-bars menu" aria-hidden="true"></i>
+        </div>
+        <ul>
+            <li><a href="{% url 'web:main1' %}">홈</a></li>
+            <li><a href="#">매칭</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="{% url 'web:logout' %}">로그아웃</a></li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+    <div class="layout">
+        <header>
+            <div class="title">
+                <div class="title-str1">Welcome to</div>
+                <div class="title-str2">EYE CONTACT</div>
+
+            </div>
+            <!-- <span><img src="/img/character.png" alt="character-image" id="character"></span> -->
+        </header>
+
+        <div class="textbox">
+            <p class="str1">EYE CONTACT은 핸드폰 어플리케이션 사용에 있어서</p>
+            <p class="str2">시각적으로 도움이 필요한 이와의</p>
+            <p class="str3">소통을 통해 도움을 줄 수 있는 곳이에요 </p>
+        </div>
+    </div>
+</body>
+</html>
